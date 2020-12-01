@@ -17,6 +17,7 @@ import 'mavon-editor/dist/css/index.css'
 import "./assets/font/iconfont.css"
 import axios from 'axios'
 Vue.prototype.$http = axios
+import store from './store/index'
 import md5 from 'js-md5'  //引入
 Vue.prototype.$md5 = md5;  //定义全局变量
 Vue.use(mavonEditor)
@@ -48,5 +49,6 @@ axios.interceptors.request.use(
 new Vue({
   router,
   i18n,
+    store,
   render: h => h(App)
 }).$mount('#app')

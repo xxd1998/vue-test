@@ -17,6 +17,8 @@
         <div @click="change">
             <img src="../assets/right.png" style="width: 50px;height: 50px" :class="status?'active1':'active2'" alt="">
         </div>
+        <el-button @click="$store.commit('add')">vuex中加</el-button>
+        {{$store.state.count}}
     </div>
 </template>
 
